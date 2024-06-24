@@ -1,0 +1,45 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">Optipack3d</div>
+        <div class="profile">
+            <img src="{% static 'images/profile.jpg' %}" alt="Profile Image" class="profile-img">
+            <div class="profile-info">
+                <span class="username">{{ user.first_name }}</span>
+                <span class="domain">OPTIPACK3D.COM</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Welcome {{ user.first_name }}</h1>
+        <p>Choose your profile type to continue</p>
+        <div class="profiles">
+            <div class="profile-box loading-team">
+                <h2><a href="#" style="text-decoration: none; color: black;">Loading team</a></h2>
+                <p>Final set of loaders responsible for executing load plans</p>
+            </div>
+            <div class="profile-box shipping-coordinator">
+                <h2>Shipping Coordinator</h2>
+                <p>End-to-End management of freight</p>
+            </div>
+            <div class="profile-box load-planner">
+                <h2>Load Planner</h2>
+                <p>Set of user responsible for creating right loads to dispatch;</p>
+            </div>
+            <div class="profile-box leadership-team">
+                <h2>Leadership team</h2>
+                <p>Track key performance metrics and drive productivity agenda</p>
+            </div>
+        </div>
+        <button class="continue-btn">Let's go!</button>
+    </main>
+</body>
+</html>
