@@ -82,6 +82,7 @@ def additionalInformation(request):
     return render(request, 'additionalInformation.html')  # Render additional information form for GET request
 
 def login_view(request):
+    return render(request, 'login.html')
     if request.method == "POST":
         email = request.POST.get('email')
         password = request.POST.get('password')
@@ -100,7 +101,7 @@ def login_view(request):
         else:
             return redirect('additionalInformation')
 
-    return render(request, 'login.html')  # Render the login template in case of GET request or errors
+      # Render the login template in case of GET request or errors
 
 
 @custom_login_required

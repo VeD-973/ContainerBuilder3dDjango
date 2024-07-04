@@ -1,0 +1,8 @@
+Django
+simplejson 
+mysqlclient
+pillow
+sqlparse
+gunicorn
+whitenoise
+asgiref
